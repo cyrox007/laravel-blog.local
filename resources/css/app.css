@@ -37,7 +37,7 @@ section {
   color: var(--tc);
 }
 .header nav {
-  width: 400px;
+  width: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form h1 {
+  font-family: Arial;
+  margin-bottom: 10px;
+}
+form input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+form button {
+  cursor: pointer;
+  width: 50%;
+  padding: 15px;
+  border: none;
+  background: rgb(69, 155, 84);
+  color: white;
+  transition: opacity 0.15s ease;
+}
+form button:hover {
+  opacity: 0.8;
+}
