@@ -22,4 +22,5 @@ Route::get("/", [MainController::class, "index"])->name("index");
 Route::prefix("auth")->group(function(){
     Route::get("/login", [LoginController::class, "index"])->name("login");
     Route::post("/login", [LoginController::class, "login"])->name("check_user");
+    Route::get("/logout", [LoginController::class, "logout"])->name("logout");
 });
