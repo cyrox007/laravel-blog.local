@@ -1,4 +1,6 @@
 @extends('core.base')
 @section('content')
-test
+<section id="main-content">
+    <div class="container">test</div>
+</section>
 @endsection

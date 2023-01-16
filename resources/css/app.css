@@ -1,9 +1,55 @@
+:root {
+  --tc: rgb(32, 32, 32);
+  --tc-hover: rgb(202, 202, 202);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-header {
+header,
+main,
+section {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #000;
+}
+.header a {
+  text-decoration: none;
+  font-family: Arial;
+}
+.header #logo {
+  font-size: 24px;
+  padding: 20px 0;
+  color: var(--tc);
+}
+.header nav {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header nav a {
+  height: 100%;
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s ease-in-out;
+  color: var(--tc);
+}
+.header nav a:hover {
+  background: var(--tc-hover);
 }
