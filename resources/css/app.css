@@ -53,3 +53,31 @@ section {
 .header nav a:hover {
   background: var(--tc-hover);
 }
+
+#post-create {
+  margin-top: 20px;
+}
+#post-create form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#post-create form label {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial;
+  font-weight: 600;
+}
+#post-create form label input[type=text] {
+  padding: 10px;
+}
+#post-create form label textarea {
+  padding: 10px;
+}
+
+.notes__item {
+  border: 1px solid #000;
+  padding: 10px;
+  margin: 5px 0;
+}

@@ -1,4 +1,7 @@
 @extends("auth.index")
+@section("title")
+    Login
+@endsection
 @section("content")
 <form action="" method="post">
     <h1>Sign In</h1>

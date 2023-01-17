@@ -4,7 +4,7 @@
         <nav>
             @if ($user == null)
                 <a href="{{ route('login') }}">Sign In</a>
-                <a href="http://">Sign Up</a>
+                <a href="{{ route('register') }}">Sign Up</a>
             @else
                 <a href="{{ route('login') }}">{{ $user }}</a>
                 <a href="{{ route('logout') }}">Exit</a>
