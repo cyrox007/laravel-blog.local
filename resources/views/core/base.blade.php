@@ -10,5 +10,6 @@
 <body>
     @include('shared.header.index')
     @yield('content')
+    @include('shared.footer.index')
 </body>
 </html>
