@@ -5,10 +5,9 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Throwable;
+use App\Jobs\ProcessUserVerified;
 
 class LoginController extends Controller
 {
@@ -44,21 +43,25 @@ class LoginController extends Controller
         $email = $request->input("email");
         $name = $request->input("name");
         $password = $request->input("password");
-
+        $token = Str::random(10);
+        
         
         try {
             User::insert([
                 "email" => $email,
                 "name" => $name,
                 "password" => md5($password),
-                "remember_token" => Str::random(10),
-                "email_verified_at" => now(),
+                "remember_token" => $token
             ]);
+            ProcessUserVerified::dispatch($email);
             return redirect(route("index"));
-        } catch (Throwable $e) {
-            echo $e;
-            return redirect(route("register"));
+        } catch (Throwable $ex) {
+            dd($ex);
+            /* return redirect(route("register")); */
         }
-        
+    }
+
+    public function email_verified() {
+        # code...
     }
 }

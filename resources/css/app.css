@@ -81,3 +81,22 @@ section {
   padding: 10px;
   margin: 5px 0;
 }
+.notes__item nav {
+  display: flex;
+}
+.notes__item nav a {
+  font-family: Arial;
+  font-size: 15px;
+  text-decoration: none;
+  padding: 5px;
+  margin-right: 5px;
+  color: white;
+  background: rgb(66, 66, 185);
+}
+.notes__item nav form button {
+  cursor: pointer;
+  padding: 7px;
+  border: none;
+  color: white;
+  background: rgb(177, 50, 50);
+}

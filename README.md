@@ -20,3 +20,9 @@ npm run build
 
 ### Linux
 Для запуска необходимо собрать веб-сервер LAMP
+
+## Laravel Worker
+Для запуска очереди задач необходимо ввести в консоль
+``` bash 
+php artisan queue:work
+```
