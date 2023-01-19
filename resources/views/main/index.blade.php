@@ -11,8 +11,13 @@
             @foreach($posts as $post)
                 <div class="notes__item">
                     <h2>{{ $post['title'] }}</h2>
-                    <span>{{ $post['created_at'] }}</span>
-                    <span>{{ $post['name'] }}</span>
+                    <div class="notes__item--info">
+                        <span>Post created: {{ $post['created_at'] }}</span>
+                        @if ($post['created_at'] != $post['updated_at'])
+                            <span>Post been updated: {{ $post['updated_at'] }}</span>
+                        @endif
+                        <span>Author: {{ $post['name'] }}</span>
+                    </div>
                     <p>{{ $post['body'] }}</p>
                     @if ($user != null)
                     <nav>

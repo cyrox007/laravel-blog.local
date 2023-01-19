@@ -1,12 +1,36 @@
 :root {
   --tc: rgb(32, 32, 32);
   --tc-hover: rgb(202, 202, 202);
+  --color1: #3F4851;
+  --color2: #7D7D7C;
+  --color3: #98A1AF;
+  --color4: #A0B7BD;
+  --color5: #F8F9F8;
+  --border: 1px solid var(--color1);
+  --t-headers: Arial;
+  --t-paragraph: "Times New Roman";
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background: var(--color5);
+  font-family: var(--t-paragraph);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--t-headers);
+}
+
+a {
+  text-decoration: none;
+  font-family: var(--t-paragraph);
 }
 
 header,
@@ -30,11 +54,7 @@ section {
 .header {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #000;
-}
-.header a {
-  text-decoration: none;
-  font-family: Arial;
+  border-bottom: var(--border);
 }
 .header #logo {
   font-size: 24px;
@@ -76,7 +96,7 @@ section {
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  font-family: Arial;
+  font-family: var(--t-headers);
   font-weight: 600;
 }
 #post-create form label input[type=text] {
@@ -87,15 +107,30 @@ section {
 }
 
 .notes__item {
-  border: 1px solid #000;
+  border: var(--border);
   padding: 10px;
   margin: 5px 0;
+  background: white;
+}
+.notes__item h2 {
+  color: var(--color1);
+}
+.notes__item--info {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial;
+  font-size: 13px;
+  color: var(--color2);
+  margin-bottom: 10px;
+}
+.notes__item p {
+  font-weight: 600;
+  color: #121518;
 }
 .notes__item nav {
   display: flex;
 }
 .notes__item nav a {
-  font-family: Arial;
   font-size: 15px;
   text-decoration: none;
   padding: 5px;
